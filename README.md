@@ -18,7 +18,7 @@ Este é um projeto simples de área de login, criado usando HTML, CSS e JavaScri
 ## Como Usar
 
 1. **Clonar o repositório** ou baixe o arquivo `login.html` para o seu computador.
-2. Abra o arquivo `login.html` em qualquer navegador web.
+2. Abra o arquivo `login-proje-matheus-libonatti.html` em qualquer navegador web.
 3. No formulário de login, insira o nome de usuário e senha como no exemplo abaixo:
 
    - **Usuário**: `usuario`
