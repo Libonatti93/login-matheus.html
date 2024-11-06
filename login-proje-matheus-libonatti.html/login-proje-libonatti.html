@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área de Login</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .login-container {
+            width: 300px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+        }
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .login-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .login-button:hover {
+            background-color: #45a049;
+        }
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Login</h2>
+    <input type="text" id="username" class="input-field" placeholder="Usuário">
+    <input type="password" id="password" class="input-field" placeholder="Senha">
+    <button class="login-button" onclick="login()">Entrar</button>
+    <div id="error-message" class="error-message"></div>
+</div>
+
+<script>
+    function login() {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        const errorMessage = document.getElementById('error-message');
+
+        // Exemplo simples de autenticação
+        if (username === "" || password === "") {
+            errorMessage.textContent = "Por favor, preencha todos os campos.";
+        } else if (username === "usuario" && password === "senha123") { // Dados fixos de exemplo
+            alert("Login bem-sucedido!");
+            errorMessage.textContent = "";
+            // Redirecionamento ou outras ações podem ser adicionados aqui
+        } else {
+            errorMessage.textContent = "Usuário ou senha incorretos.";
+        }
+    }
+</script>
+
+</body>
+</html>
